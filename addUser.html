@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<script src='js/jquery.min.js'></script>
+		<script src='js/bootstrap.min.js'></script>
+		<style>
+			.mypic img{width:25px;}
+			.nav .mypic a{padding-bottom:0;}
+			.marg_10{margin-top:10px;}
+			.img60{width:60px;}
+			.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+				vertical-align: middle;
+			}
+			.lisGroup{border:1px solid #eee;border-top: none;}
+			.pding{padding:10px;}
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			  <div class="container">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="index.html">OA办公系统</a>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li><a href="index.html"><span class='glyphicon glyphicon-home'></span></spa>管理首页</a></li>
+			        <li class="active"><a href="userList.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+			        <li><a href="content.html">内容管理</a></li>
+			        <li><a href="label.html">标签管理</a></li>
+			        <li><a href="email.html">我的邮箱</a></li>
+			      </ul>
+			      <ul class="nav navbar-nav navbar-right">
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#"><span class='glyphicon glyphicon-screenshot'></span>前台首页</a></li>
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更换主题 <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#"><span class='glyphicon glyphicon-screenshot'></span>前台首页</a></li>
+			            <li><a href="#"><span class='glyphicon glyphicon-user'></span>个人主页</a></li>
+			            <li><a href="#"><span class='glyphicon glyphicon-cog'></span>个人设置</a></li>
+			            <li><a href="#"><span class='glyphicon glyphicon-credit-card'></span>账户中心</a></li>
+			            <li><a href="#"><span class='glyphicon glyphicon-heart'></span>我的收藏</a></li>
+			            <li><a href="#"><span class='glyphicon glyphicon-off'></span>退出</a></li>
+			            </ul>
+			        </li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+		</nav>
+		<div class="container">
+			<div class="col-md-2">
+				<div class="list-group">
+				  <a href="userList.html" class="list-group-item">用户管理</a>
+				  <a href="userSearch.html" class="list-group-item ">用户搜索</a>
+				  <a href="addUser.html" class="list-group-item active">添加用户</a>
+			</div>
+			</div>
+			<div class="col-md-10">
+				<h3>用户管理</h3>
+				<hr />
+				<ul class="nav nav-tabs">
+					  <li><a href="userList.html">用户列表</a></li>
+					  <li ><a href="userSearch.html">用户搜索</a></li>
+					  <li class="active"><a href="#mymodal" data-role = "button" data-toggle= "modal" data-target='#mymodal'>添加用户</a></li>
+				</ul>
+				<div class="modal fade" id='mymodal'>
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				        <h4 class="modal-title">添加用户</h4>
+				      </div>
+				      <div class="modal-body">
+				       <form role="form">
+						  <div class="form-group">
+						    <label for="exampleInputEmail1">用户名</label>
+						    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="用户名">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">用户密码</label>
+						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入用户密码">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">确认用户密码</label>
+						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入用户密码">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">请输入用户邮箱</label>
+						    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="请输入用户邮箱">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">所属用户组</label>
+						    <select class="form-control" id="exampleInputPassword1">
+						    	<option>初级会员</option>
+						     	<option>中级会员</option>
+						     	<option>高级会员</option>
+						     	<option>顶级会员</option>
+						     	<option>至尊会员</option>
+						    </select>
+						  </div>
+
+						</form>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				        <button type="button" class="btn btn-primary">提交</button>
+				      </div>
+				    </div><!-- /.modal-content -->
+				  </div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+			</div>
+		</div>
+		<div class="footer text-center">
+			<p>联系方式：123123</p>
+		</div>
+	</body>
+</html>
+
+
